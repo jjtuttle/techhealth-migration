@@ -68,7 +68,7 @@ export class Project2Stack extends cdk.Stack {
     ec2Role.addManagedPolicy(
       iam.ManagedPolicy.fromAwsManagedPolicyName("AmazonSSMManagedInstanceCore")
     );
-
+    //
     // Launch EC2 in public subnet.
     const ec2Instance = new ec2.Instance(this, "MigrationEC2", {
       vpc,
