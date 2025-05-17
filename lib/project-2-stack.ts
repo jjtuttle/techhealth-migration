@@ -62,7 +62,7 @@ export class Project2Stack extends cdk.Stack {
 
     // IAM Role for EC2 Instances.
     const ec2Role = new iam.Role(this, "EC2IAMRole", {
-      assumedBy: new iam.ServicePrincipal("ec2.amazon.com"),
+      assumedBy: new iam.ServicePrincipal("ec2.amazonaws.com"),
     });
     // Manage policy
     ec2Role.addManagedPolicy(
